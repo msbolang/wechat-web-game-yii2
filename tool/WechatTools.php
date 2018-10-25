@@ -7,18 +7,33 @@ use Yii;
 
 class WechatTools  {
 
-    public $_wechatAuthUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?'; //网页授权API
-    public $_debug = true;
-    public function __construct() {}
+    private $_wechatAuthUrl = ''; //网页授权API
+    
+    private $_debug = true;
+    
+    protected $_appid;
+    
+    protected $_secret;
+    
+    protected $_followUrl;
+    
+    protected $_forceFollow;
+    
+    public function __construct($appid,$secret,$forceFollow,$followUrl) {
+        $this->_appid = $appid;
+    }
+    
+    public function test() {
+        var_dump($this->_appid);exit;
+    }
 
     /**
      * 
      * @param type $authUrl 网页授权
      */
     public function auth($authUrl){
-          // 第一步：微信网页授权
-         $this->_wechatAuthUrl = $this->_wechatAuthUrl.'appid=' .WECHATAPPID. '&redirect_uri=' . urlencode($authUrl) . '&response_type=code&scope=snsapi_base&state=3#wechat_redirect';
-         header("location: $this->_wechatAuthUrl");
+         $wechatAuthUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' .$this->_appid. '&redirect_uri=' . urlencode($authUrl) . '&response_type=code&scope=snsapi_base&state=3#wechat_redirect';
+         header("location: $wechatAuthUrl");
          exit;
     }
     
