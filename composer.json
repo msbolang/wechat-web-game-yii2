@@ -1,0 +1,33 @@
+{
+"name": "msbolang/wechat-web-game-yii2",
+"description": "Yii2 wechat-web-game-yii2",
+"keywords": [
+"yii2",
+"wechat-web-game-yii2"
+],
+"homepage": "https://github.com/msbolang/wechat-web-game-yii2",
+"type": "yii2-extension",
+"license": "MIT",
+"support": {
+"source": "https://github.com/msbolang/wechat-web-game-yii2"
+},
+"authors": [
+{
+"name": "wechat-web-game-yii2",
+"email": "965556835@qq.com"
+}
+],
+"minimum-stability": "stable",
+"require": {
+"php": ">=5.4.0",
+"yiisoft/yii2": ">=2.0.6"
+},
+"autoload": {
+"psr-4": {
+"wechat\\": ""
+}
+},
+"config": {
+"process-timeout": 1800
+}
+}
