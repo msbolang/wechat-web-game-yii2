@@ -13,18 +13,18 @@
 },
 "authors": [
 {
-"name": "wechat-web-game-yii2",
-"email": "965556835@qq.com"
+	"name": "wechat-web-game-yii2",
+	"email": "965556835@qq.com"
 }
 ],
 "minimum-stability": "stable",
 "require": {
-"php": ">=5.4.0",
-"yiisoft/yii2": ">=2.0.6"
+	"php": ">=5.4.0",
+	"yiisoft/yii2": ">=2.0.6"
 },
 "autoload": {
-"psr-4": {
-"wechat\\": ""
+	"psr-4": {
+	"wechat\\": ""
 }
 },
 "config": {
