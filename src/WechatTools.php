@@ -1,6 +1,6 @@
 <?php
 
-namespace msbolang\WechatTools;
+namespace msbolang\wechatTools;
 
 use Yii;
 
