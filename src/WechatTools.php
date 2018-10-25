@@ -5,13 +5,11 @@ namespace msbolang\WechatTools;
 use Yii;
 
 
-class Wechathandle  {
+class WechatTools  {
 
     public $_wechatAuthUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?'; //网页授权API
     public $_debug = true;
-    public function __construct() {
-       
-    }
+    public function __construct() {}
 
     /**
      * 
