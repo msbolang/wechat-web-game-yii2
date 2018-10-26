@@ -6,21 +6,21 @@ use Yii;
 
 
 class WechatTools  {
-
-    private $_wechatAuthUrl = ''; //网页授权API
-    
+   
     private $_debug = true;
     
-    protected $_appid;
+    private $_secret;
     
-    protected $_secret;
+    public $_appid;
     
-    protected $_followUrl;
+    public $_followUrl;
     
-    protected $_forceFollow;
+    public $_forceFollow;
     
-    public function __construct($appid,$secret,$forceFollow,$followUrl) {
-        $this->_appid = $appid;
+    public function __construct() {
+        $this->_appid = Yii::$app->wechat->appid;
+        $this->_secret = Yii::$app->wechat->secret;
+        $this->_followUrl = Yii::$app->wechat->followUrl;
     }
     
     public function test() {
